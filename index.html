@@ -3,21 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTH4000 Programming in Python I - Week 5 Lab</title>
+    <title>Week 5 Lab Workbook</title>
 </head>
 <body>
-    <h1> MTH4000 Programming in Python I</h1>
-    <h2> Week 5 Lab Workbook</h2>
-    <h3><em> Dr Matthew Lewis and Prof. Thomas Prellberg </em></h3>
+    <h1>MTH4000 Programming in Python I</h1>
+    <h2>Week 5 Lab Workbook</h2>
+    <h3><em>Dr Matthew Lewis and Prof. Thomas Prellberg</em></h3>
 
-    <h2> Exercise 1: <em>Logical Operators</em> </h2>
-    <p>In the lecture notes, we saw logical operators that acted on pairs of boolean values to produce other booleans. One such operator was <code>and</code>.</p>
+    <h2>Exercise 1: <em>Logical Operators</em></h2>
+    <p>
+        In the lecture notes, we saw logical operators that acted on pairs of boolean values to produce other booleans.
+        One such operator was <code>and</code>.
+    </p>
+    <p>
+        Since there are only two distinct boolean values (<code>True</code> and <code>False</code>), and there are two arguments
+        in each call using the <code>and</code> operator, there will be \(2 \\times 2 = 4\) combinations that define the effect
+        of this operator. Compute and print the truth value of these four combinations.
+    </p>
 
-    <p>Since there are only two distinct boolean values (<code>True</code> and <code>False</code>), and there are two arguments in each call using the <code>and</code> operator, there will be 4 combinations that define the effect of this operator. Compute and print the truth value of these four combinations.</p>
+    <h2>Truth Table</h2>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>B and A</th>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>True</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>False</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>True</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>False</td>
+            <td>False</td>
+        </tr>
+    </table>
 
-    <p>We can collate this data into a truth table. This effectively gives a definition of the <code>and</code> operator.</p>
+    <p>
+        The implies operator (sometimes denoted with the symbol &rArr;) is not implemented in a standard Python environment.
+        It can be defined with the following truth table:
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A &rArr; B</th>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>True</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>False</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>True</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>False</td>
+            <td>True</td>
+        </tr>
+    </table>
 
-    <!-- Add further exercises and content here as needed -->
+    <p>Use built-in logical operators to verify that for any boolean values A and B, the statement A &rArr; B is equivalent to the statement B or not A.</p>
+
+    <h2>Exercise 2: Implementing Logical Functions</h2>
+    <p>Construct a function <code>implies</code> that accepts two boolean values, <code>A</code> and <code>B</code>, and returns the result of A &rArr; B.</p>
 </body>
 </html>
+
 
